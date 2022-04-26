@@ -19,6 +19,10 @@ public class RabbitMQConfig {
     Queue helloPojoQueue() {
         return new Queue("helloPojo");
     }
+    @Bean
+	public Queue anotherQueue() {
+		return new Queue("anotherQueue");
+	}
 
     @Bean
     MessageConverter messageConverter() {

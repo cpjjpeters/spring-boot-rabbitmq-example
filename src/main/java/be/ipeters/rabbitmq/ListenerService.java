@@ -19,4 +19,9 @@ public class ListenerService {
     public void getPojo(Notification message) {
         log.info("From Queue : {}", message);
     }
+
+    @RabbitListener(queues = "anotherQueue")
+    public void getAnotherString(Notification message) {
+        log.info("From Queue : {}", message);
+    }
 }
